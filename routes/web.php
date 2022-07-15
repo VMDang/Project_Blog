@@ -16,3 +16,16 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+//Route::get('/users/createUser',function (){
+//    return view('users/createUser');
+//})->name('form-register');
+
+Route::get('/users/createUser',[\App\Http\Controllers\UserController::class,'form_register'])->name('form_register');
+Route::post('/users/createUser',[\App\Http\Controllers\UserController::class,'register'])->name('register');
+
+
+Route::get('/post/create','Postcontroler@add')->name('post.add');
+Route::post('/post/create','PostController@create')->name('post.create');
+
+
