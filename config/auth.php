@@ -68,8 +68,9 @@ return [
     'providers' => [
         'users' => [
             'driver' => 'eloquent',
-            'model' => App\User::class,
-        ],
+
+            'model' => App\Model\User::class,
+        ]
 
         // 'users' => [
         //     'driver' => 'database',
@@ -83,7 +84,11 @@ return [
     |--------------------------------------------------------------------------
     |
     | You may specify multiple password reset configurations if you have more
+<<<<<<< HEAD
+    | than one user table or odel in the application and you want to have
+=======
     | than one user table or model in the application and you want to have
+>>>>>>> 07c6abf5755266ea2554f1dd3fc7bc7441b112fa
     | separate password reset settings based on the specific user types.
     |
     | The expire time is the number of minutes that the reset token should be
