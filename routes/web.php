@@ -19,7 +19,7 @@ Route::get('/', function () {
 
 //Route::get('/users/createUser',function (){
 //    return view('users/createUser');
-//})->name('form-register');
+//})->name('form-register');g
 
 Route::get('/users/createUser',[\App\Http\Controllers\UserController::class,'form_register'])->name('form_register');
 Route::post('/users/createUser',[\App\Http\Controllers\UserController::class,'register'])->name('register');
