@@ -17,6 +17,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+
 //Route::get('/users/createUser',function (){
 //    return view('users/createUser');
 //})->name('form-register');g
