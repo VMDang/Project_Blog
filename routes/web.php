@@ -14,9 +14,18 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('index');
 });
 
+Route::get('/register', function () {
+    return view('register');
+});
+Route::get('/profile', function () {
+    return view('profile');
+});
+Route::get('/posts', function () {
+    return view('posts');
+});
 
 //Route::get('/users/createUser',function (){
 //    return view('users/createUser');
@@ -28,5 +37,6 @@ Route::post('/users/createUser',[\App\Http\Controllers\UserController::class,'re
 
 Route::get('/post/create','Postcontroler@add')->name('post.add');
 Route::post('/post/create','PostController@create')->name('post.create');
+
 
 
